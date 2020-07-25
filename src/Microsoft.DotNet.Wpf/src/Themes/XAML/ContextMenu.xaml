@@ -60,7 +60,8 @@ See the LICENSE file in the project root for more information.
                                         Width="{Binding ElementName=ContextMenuBorder,Path=ActualWidth}"
                                         Fill="{Binding ElementName=ContextMenuBorder,Path=Background}" />
                                 </Canvas>
-                                <Rectangle Fill="#F1F1F1"
+                                <Rectangle Fill="{TemplateBinding Foreground}"
+                                           Opacity="0.02"
                                            HorizontalAlignment="Left"
                                            Width="28"
                                            Margin="1,2"
@@ -69,11 +70,12 @@ See the LICENSE file in the project root for more information.
                                 <Rectangle HorizontalAlignment="Left"
                                            Width="1"
                                            Margin="29,2,0,2"
-                                           Fill="#E2E3E3"/>
+                                           Fill="{TemplateBinding Foreground}"
+                                           Opacity="0.09"/>
                                 <Rectangle HorizontalAlignment="Left"
                                            Width="1"
                                            Margin="30,2,0,2"
-                                           Fill="White"/>
+                                           Fill="{TemplateBinding Background}"/>
                                 <ItemsPresenter Name="ItemsPresenter" Margin="{TemplateBinding Padding}"
                                                 KeyboardNavigation.DirectionalNavigation="Cycle"
                                                 SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
